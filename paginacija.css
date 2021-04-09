@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.m-pagination {
+  padding: 2rem;
+  background-color: red;
+  position: absolute;
+  top: 45%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.m-pagination__page-number {
+  margin-left: 0.4rem;
+  margin-right: 0.4rem;
+  cursor: pointer;
+}
+
+.m-pagination__page-number--active {
+  border-bottom: 2px solid black;
+  cursor: default;
+}
