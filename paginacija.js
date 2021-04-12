@@ -21,27 +21,22 @@ $(function () {
 
   // My create element function
   const myCreateElement = (data) => {
-
     // Get tag
     const tag = data.tag.toUpperCase();
-
     // Create element
     const element = document.createElement(tag);
-
     // Add content
     element.innerText = data.contents ? data.contents : null;
-
     // Add class(es)
     if (data.classes) {
       if (typeof data.classes === 'object') {
         data.classes.forEach((currentClass) => {
-          currentClass && element.classList.add(currentClass); // Ako ne stavim ovaj conditional, vratice mi false dole
+          currentClass && element.classList.add(currentClass);
         });
       } else {
         element.classList.add(data.classes);
       }
     }
-
     // Add dataset(s)
     if (data.dataset) {
       data.dataset.forEach((currentDataset) => {
@@ -118,7 +113,6 @@ $(function () {
     `);
   }
 
-
   // Render Pagination Function
   const createPagination = (numberOfPages, currentPage) => {
 
@@ -138,7 +132,6 @@ $(function () {
         pagesInBetweenMinus(currentPage);
       }
     }
-
     // Event listener for pagination numbers
     const pageNumbers = $(`.${pagination.stateClasses.pageNumber}`);
     pageNumbers.on('click', function () {
